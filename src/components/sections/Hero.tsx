@@ -35,24 +35,30 @@ const Hero = () => {
         border-[0.5px] rounded-full border-white
         py-[0.125rem] px-[0.75rem] mb-[0.875rem]"
       >
-        <p className="font-intel text-[0.75rem] font-regular tracking-tighter pb-[0.125rem] break-keep ">
+        <p
+          className="
+          select-none
+          font-intel text-[0.75rem] font-regular
+          tracking-tighter
+          pb-[0.125rem] break-keep "
+        >
           {displayText}
           <span className="animate-blink">|</span>
         </p>
       </div>
       <h2
         data-cursor="magnify"
-        className="font-pretendard text-6xl font-extrabold tracking-tight mb-[0.25rem]"
+        className="select-none font-pretendard text-6xl font-extrabold tracking-tight mb-[0.25rem]"
       >
         유지형
       </h2>
       <h1
         data-cursor="magnify"
-        className="font-syne text-7xl font-black break-keep tracking-tight mb-[0.875rem]"
+        className="select-none font-syne text-7xl font-black break-keep tracking-tight mb-[0.875rem]"
       >
         JiHyoung You
       </h1>
-      <p className="group font-pretendard text-lg text-neutral-500 mb-[3rem] flex flex-wrap cursor-default">
+      <p className="select-none group font-pretendard text-lg text-neutral-500 mb-[3rem] flex flex-wrap cursor-default">
         {intro.split("").map((char, index) => (
           <span
             key={index}
@@ -75,44 +81,80 @@ const Hero = () => {
           </span>
         ))}
       </p>
-      <div className="flex justify-center items-center gap-5">
+      <div className="flex justify-center items-center gap-8">
         <a
           href="https://github.com/JiHy0ung"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center gap-1
-          bg-red-800 hover:bg-red-600
-          transition-bg duration-200
-          border-none rounded-sm py-[0.375rem] px-[0.75rem] cursor-pointer"
+          className="
+          group
+          flex
+          items-center
+          gap-1
+          border-none
+          rounded-sm
+          py-[0.375rem]
+          px-[0.75rem]
+          "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="size-5"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
             />
           </svg>
-          <p className="font-pretendard font-regular">프로젝트 확인</p>
+
+          <span className="relative overflow-hidden h-5">
+            <p
+              className="
+              block
+              transition-transform
+              duration-300
+              group-hover:-translate-y-full
+              font-pretendard
+              "
+            >
+              프로젝트 확인
+            </p>
+
+            <p
+              className="
+              absolute
+              top-full
+              left-0
+              transition-transform
+              duration-300
+              group-hover:-translate-y-full
+              font-pretendard
+              "
+            >
+              프로젝트 확인
+            </p>
+          </span>
         </a>
         <a
           href="https://github.com/JiHy0ung"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center gap-2
-          border-[0.5px] border-red-600/50 hover:border-red-600/70 rounded-sm py-[0.5625rem]
-          transition-colors duration-200
+          className="flex justify-center items-center
+          border-[0.5px] border-red-600/50 hover:border-red-600/70 rounded-md
+          pt-[0.6rem] pb-[0.65rem] px-[1rem]
+          transition-colors duration-500
           hover:text-red-500
-          px-[0.75rem] cursor-pointer"
+          px-[0.75rem] cursor-pointer
+          group hover:scale-[1.01] transition
+          "
         >
           <svg
-            height="18"
+            height="16"
             viewBox="0 0 416 95"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
