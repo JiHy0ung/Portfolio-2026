@@ -145,7 +145,7 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="flex justify-center items-center
-          border-[0.5px] border-red-600/50 hover:border-red-600/70 rounded-md
+          border-[0.5px] border-red-600/50 hover:border-red-600/70 rounded-sm
           pt-[0.6rem] pb-[0.65rem] px-[1rem]
           transition-colors duration-500
           hover:text-red-500
