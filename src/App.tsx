@@ -1,8 +1,10 @@
+import Header from "./layout/Header";
+
 function App() {
   return (
-    <div className="min-h-screen flex justify-center items-center ">
-      <h1 className="font-syne text-7xl font-black">Portfolio</h1>
-    </div>
+    <main className="min-h-screen flex flex-col items-center">
+      <Header />
+    </main>
   );
 }
 
