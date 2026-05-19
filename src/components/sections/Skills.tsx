@@ -342,7 +342,7 @@ const SKILL_GROUPS: SkillGroupType[] = [
   },
 ];
 
-function SkillGroup({ icon, title, tags, levels }: SkillGroupType) {
+function SkillGroup({ icon, title, tags }: SkillGroupType) {
   return (
     <div
       className="
