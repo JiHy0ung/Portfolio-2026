@@ -1,3 +1,4 @@
+import Contact from "./components/sections/Contact";
 import Hero from "./components/sections/Hero";
 import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
@@ -34,9 +35,12 @@ function App() {
 
       <main className="relative min-h-screen w-full flex flex-col items-center">
         <Header />
+
         <Hero />
         <Skills />
         <Projects />
+
+        <Contact />
       </main>
     </>
   );
