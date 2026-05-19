@@ -173,6 +173,11 @@ const CustomCursor = () => {
         style={{
           width: isMagnify ? LENS_SIZE : 0,
           height: isMagnify ? LENS_SIZE : 0,
+          backgroundImage: `
+              linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px)
+            `,
+          backgroundSize: "100px 100px",
         }}
       >
         {/* 돋보기 렌즈 */}
