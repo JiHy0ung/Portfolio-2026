@@ -1,4 +1,5 @@
 import Hero from "./components/sections/Hero";
+import Skills from "./components/sections/Skills";
 import CustomCursor from "./components/ui/CustomCursor";
 import Header from "./layout/Header";
 
@@ -33,6 +34,7 @@ function App() {
       <main className="relative min-h-screen w-full flex flex-col items-center">
         <Header />
         <Hero />
+        <Skills />
       </main>
     </>
   );
