@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 interface Project {
   type: string;
   year: string;
