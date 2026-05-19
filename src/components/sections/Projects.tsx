@@ -20,15 +20,7 @@ const PROJECTS: Project[] = [
       "TanStack Query 도입으로 서버 상태 관리 및 API 캐싱 최적화",
       "Vercel CI/CD 자동 배포 파이프라인 구성",
     ],
-    tech: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "MUI",
-      "TanStack Query",
-      "Supabase",
-      "Tour API",
-    ],
+    tech: ["React", "TypeScript", "Vite", "MUI", "TanStack Query", "Supabase"],
     links: [
       {
         label: "라이브 데모",
@@ -52,14 +44,7 @@ const PROJECTS: Project[] = [
       "Google OAuth + Cloudinary 이미지 업로드",
       "Husky + lint-staged 코드 품질 자동화",
     ],
-    tech: [
-      "React 19",
-      "TypeScript",
-      "Redux Toolkit",
-      "MUI",
-      "FullCalendar",
-      "Cloudinary",
-    ],
+    tech: ["React", "TypeScript", "Redux Toolkit", "MUI", "Cloudinary"],
     links: [
       {
         label: "라이브 데모",
@@ -107,14 +92,17 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <div
       className="
-        relative overflow-hidden
-        bg-[#2a0f0f]/70 border border-[#3b1e1e] rounded-2xl
-        p-8 px-10
-        grid grid-cols-[1fr_auto] gap-8 items-start
-        hover:-translate-y-1 hover:border-red-500/40
-        hover:shadow-[0_20px_60px_rgba(0,0,0,.4)]
-        transition-all duration-300
-        group
+      relative overflow-hidden
+      bg-[#2a0f0f]/70 border border-[#3b1e1e] rounded-2xl
+      p-8 px-10
+
+      grid grid-cols-1 md:grid-cols-[1fr_auto]
+      gap-8 items-start
+
+      hover:-translate-y-1 hover:border-red-500/40
+      hover:shadow-[0_20px_60px_rgba(0,0,0,.4)]
+      transition-all duration-300
+      group
       "
     >
       <div
@@ -169,7 +157,15 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
 
-      <div className="relative z-10 flex flex-col gap-3 min-w-[110px]">
+      <div
+        className="
+        relative z-10
+        flex flex-row md:flex-col
+        gap-3
+        w-full md:w-auto
+        "
+      >
+        {" "}
         {project.links.map((link) => (
           <a
             key={link.label}

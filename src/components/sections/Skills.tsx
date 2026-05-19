@@ -1,12 +1,14 @@
 import type { ReactNode } from "react";
 
-type LevelKey = "상" | "중" | "하";
+type SkillTag = {
+  label: string;
+  icon?: ReactNode;
+};
 
 type SkillGroupType = {
   icon: ReactNode;
   title: string;
-  tags: string[];
-  levels: Record<LevelKey, string[]>;
+  tags: SkillTag[];
 };
 
 const SKILL_GROUPS: SkillGroupType[] = [
@@ -16,50 +18,195 @@ const SKILL_GROUPS: SkillGroupType[] = [
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke-width="2"
+        strokeWidth="2"
         stroke="currentColor"
         className="size-5"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
         />
       </svg>
     ),
     title: "Frontend",
-    tags: ["React", "JavaScript", "TypeScript", "HTML/CSS", "Next.js"],
-    levels: {
-      상: ["React", "JavaScript ES6+", "TypeScript"],
-      중: ["HTML / CSS"],
-      하: ["Next.js"],
-    },
+    tags: [
+      {
+        label: "React",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "JavaScript",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "TypeScript",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Next.js",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+            className="w-4 h-4 bg-white rounded-full"
+          />
+        ),
+      },
+      {
+        label: "Tanstack Query",
+        icon: (
+          <img
+            src="https://img.jsdelivr.com/github.com/TanStack.png"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "React Router",
+        icon: (
+          <img
+            src="https://reactrouter.com/_brand/react-router-brand-assets/logo/Dark.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Zustand",
+        icon: (
+          <img
+            src="https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Redux",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Recharts",
+      },
+      {
+        label: "HTML",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "CSS",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Material UI",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Tailwind CSS",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+    ],
   },
+
   {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         stroke="currentColor"
         className="size-5"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z"
         />
       </svg>
     ),
     title: "Backend",
-    tags: ["Node.js", "Express"],
-    levels: {
-      상: [],
-      중: ["Node.js", "Express"],
-      하: [],
-    },
+    tags: [
+      {
+        label: "Node.js",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Express",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+            className="w-4 h-4 bg-white rounded-full"
+          />
+        ),
+      },
+      {
+        label: "MongoDB",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Supabase",
+        icon: <span>⚡</span>,
+      },
+      {
+        label: "PostgreSQL",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+    ],
   },
+
   {
     icon: (
       <svg
@@ -68,23 +215,47 @@ const SKILL_GROUPS: SkillGroupType[] = [
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        className="size-5"
+        className="size-4.5"
       >
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+          d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
         />
       </svg>
     ),
-    title: "Database",
-    tags: ["MySQL", "Supabase", "PostgreSQL"],
-    levels: {
-      상: [],
-      중: ["MySQL", "Supabase", "PostgreSQL"],
-      하: [],
-    },
+    title: "Design",
+    tags: [
+      {
+        label: "Figma",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Photoshop",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Premiere Pro",
+        icon: (
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/premierepro/premierepro-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+    ],
   },
+
   {
     icon: (
       <svg
@@ -93,7 +264,7 @@ const SKILL_GROUPS: SkillGroupType[] = [
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        className="size-5"
+        className="size-4.5"
       >
         <path
           stroke-linecap="round"
@@ -103,12 +274,71 @@ const SKILL_GROUPS: SkillGroupType[] = [
       </svg>
     ),
     title: "Tools",
-    tags: ["Git", "GitHub", "Figma", "Notion", "Vercel", "VS Code", "Postman"],
-    levels: {
-      상: ["Git", "GitHub"],
-      중: ["Figma", "Notion ", "VS Code", "Postman"],
-      하: ["Vercel"],
-    },
+    tags: [
+      {
+        label: "Git",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "GitHub",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            className="w-4 h-4 bg-white rounded-full"
+          />
+        ),
+      },
+      {
+        label: "Notion",
+        icon: (
+          <img
+            src="https://img.jsdelivr.com/github.com/makenotion.png"
+            className="w-4 h-4 bg-white rounded-full"
+          />
+        ),
+      },
+      {
+        label: "Vercel",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "VS Code",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "Postman",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+            className="w-4 h-4"
+          />
+        ),
+      },
+      {
+        label: "npm",
+        icon: (
+          <img
+            src="https://img.jsdelivr.com/github.com/npm.png"
+            className="w-4 h-4"
+          />
+        ),
+      },
+    ],
   },
 ];
 
@@ -143,43 +373,22 @@ function SkillGroup({ icon, title, tags, levels }: SkillGroupType) {
       <div className="flex flex-wrap gap-2 mb-4">
         {tags.map((tag) => (
           <span
-            key={tag}
+            key={tag.label}
             className="
-              px-3 py-1 rounded-md text-[0.8rem]
-
-              bg-white/5
-              border border-white/10
-              text-white/70
-
-              backdrop-blur-md
-
-              hover:bg-[#ff3b5c]/10
-              hover:border-[#ff3b5c]/30
-              hover:text-[#ff6b81]
-
-              transition-all duration-200
-            "
+        px-3 py-1 rounded-md text-[0.8rem]
+        bg-white/5 border border-white/10
+        text-white/70 backdrop-blur-md
+        flex items-center gap-1
+        hover:bg-[#ff3b5c]/10
+        hover:border-[#ff3b5c]/30
+        hover:text-[#ff6b81]
+        transition-all duration-200
+      "
           >
-            {tag}
+            <span className="text-[0.9rem]">{tag.icon}</span>
+            {tag.label}
           </span>
         ))}
-      </div>
-
-      <div className="space-y-3">
-        {(Object.entries(levels) as [LevelKey, string[]][]).map(
-          ([level, list]) =>
-            list.length > 0 && (
-              <div key={level}>
-                <p className="text-[0.7rem] text-[#ff6b81] mb-1">{level}</p>
-
-                <div className="space-y-1">
-                  <p className="text-[0.7rem] text-white/40 leading-snug">
-                    {list.join(", ")}
-                  </p>
-                </div>
-              </div>
-            ),
-        )}
       </div>
     </div>
   );

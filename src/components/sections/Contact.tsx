@@ -31,13 +31,24 @@ const Contact = () => {
           <div className="flex-1 h-px bg-red-900/50" />
         </div>
 
-        <h2 className="font-syne font-extrabold text-[clamp(2rem,4vw,2.575rem)] tracking-tight mb-14 text-white">
-          같이 만들어요
+        <h2 className="font-syne font-extrabold text-[clamp(2rem,4vw,2.575rem)] tracking-tight text-white">
+          새로운 기회를 기다립니다
         </h2>
-        <p className="mb-5">
-          새로운 기회와 협업을 환영합니다.
+        <p className="font-syne font-thin text-neutral-700 italic mb-14">
+          Open to opportunities
+        </p>
+
+        <p className="mb-5 text-neutral-400 font-normal text-md leading-relaxed">
+          함께 <strong className="text-neutral-200">성장</strong>할 수 있는
+          환경을 찾고 있습니다.
           <br />
-          편하게 연락주세요!
+          <strong className="text-neutral-200">사용자 경험</strong>을 고민하며
+          개발하는{" "}
+          <strong className="text-neutral-200">프론트엔드 개발자</strong>
+          입니다. <br />
+          <strong className="text-neutral-200">채용</strong> 및{" "}
+          <strong className="text-neutral-200">협업</strong> 관련 문의는
+          언제든지 연락주세요.
         </p>
         <div className="flex justify-center items-center gap-6">
           <a

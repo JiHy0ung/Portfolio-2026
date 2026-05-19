@@ -39,7 +39,7 @@ const Hero = () => {
         <p
           className="
           select-none
-          font-intel text-[0.75rem] font-regular
+          font-intel text-[0.625rem] md:text-[0.75rem] font-regular
           tracking-tighter
           pb-[0.125rem] break-keep "
         >
@@ -49,17 +49,22 @@ const Hero = () => {
       </div>
       <h2
         data-cursor="magnify"
-        className="select-none font-pretendard text-6xl font-extrabold tracking-tight mb-[0.25rem]"
+        className="select-none
+        font-pretendard text-2xl sm:text-3xl md:text-6xl font-extrabold tracking-tight mb-[0.25rem]"
       >
         유지형
       </h2>
       <h1
         data-cursor="magnify"
-        className="select-none font-syne text-7xl font-black break-keep tracking-tight mb-[0.875rem]"
+        className="select-none font-syne text-3xl sm:text-4xl md:text-7xl font-black break-keep tracking-tight mb-[0.875rem]"
       >
         JiHyoung You
       </h1>
-      <p className="select-none group font-pretendard text-lg text-neutral-500 mb-[3rem] flex flex-wrap cursor-default">
+      <p
+        className="select-none group font-pretendard
+        text-sm sm:text-md md:text-lg text-neutral-500
+        mb-[3rem] flex flex-wrap cursor-default"
+      >
         {intro.split("").map((char, index) => (
           <span
             key={index}
@@ -184,19 +189,14 @@ const Hero = () => {
       {/* 스크롤 가이드 */}
       <div
         className="
-        absolute bottom-10 left-1/2 -translate-x-1/2
-        flex flex-col items-center gap-2
-        text-xs text-white/50 font-thin"
+        absolute bottom-8 left-1/2 -translate-x-1/2
+        flex flex-col items-center
+        text-white/40"
       >
-        <span>SCROLL</span>
-        <div
-          className="
-          w-px h-10
-          bg-gradient-to-b
-          from-red-600
-          to-transparent
-          animate-[scrollLine_2s_1.4s_infinite]"
-        ></div>
+        <div className="w-5 h-8 border border-white/30 rounded-full flex justify-center">
+          <div className="w-[2px] h-2 bg-red-500 mt-2 animate-bounce" />
+        </div>
+        <div className="w-[1px] h-6 bg-white/10 mt-2" />
       </div>
     </div>
   );
