@@ -15,7 +15,7 @@ const Hero = () => {
       if (index === text.length) {
         clearInterval(interval);
       }
-    }, 90);
+    }, 45);
 
     return () => clearInterval(interval);
   }, []);
@@ -146,10 +146,9 @@ const Hero = () => {
           className="flex justify-center items-center
           border-[0.5px] border-red-600/50 hover:border-red-600/70 rounded-sm
           pt-[0.6rem] pb-[0.65rem] px-[1rem]
-          transition-colors duration-500
-          hover:text-red-500
+          transition-colors duration-300
+          hover:bg-red-800/15
           px-[0.75rem] cursor-pointer
-          group hover:scale-[1.01] transition
           "
         >
           <svg
