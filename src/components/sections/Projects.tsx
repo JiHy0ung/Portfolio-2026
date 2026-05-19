@@ -12,7 +12,7 @@ const PROJECTS: Project[] = [
   {
     type: "팀 프로젝트",
     year: "2026",
-    title: "방방곡곡 (BangBang Trip)",
+    title: "방방곡곡",
     desc: "한국관광공사 Tour API와 AI를 활용한 국내 여행 정보 조회 및 여행 일정 생성 서비스",
     bullets: [
       "한국관광공사 Tour API 연동으로 여행지 조회 및 AI 기반 일정 생성 구현",
@@ -125,7 +125,7 @@ function ProjectCard({ project }: { project: Project }) {
           {project.title}
         </h3>
 
-        <p className="text-[#966d6d] text-[0.95rem] leading-[1.75] mb-5">
+        <p className="text-[#966d6d] text-[0.95rem] leading-[1.75] mb-5 break-keep">
           {project.desc}
         </p>
 
@@ -134,7 +134,7 @@ function ProjectCard({ project }: { project: Project }) {
             <li
               key={i}
               className="text-[#966d6d] text-[0.875rem] pl-4 relative
-              before:absolute before:left-0 before:content-['▸'] before:text-red-500"
+              before:absolute before:left-0 before:content-['▸'] before:text-red-500 break-keep"
             >
               {b}
             </li>
@@ -149,6 +149,7 @@ function ProjectCard({ project }: { project: Project }) {
                 bg-[#271111] border border-[#3b1e1e] text-[#966d6d]
                 rounded-[5px] px-2.5 py-0.5 text-[0.75rem]
                 group-hover:text-red-300 group-hover:border-red-500/25
+                break-keep
               "
             >
               {t}
@@ -177,6 +178,7 @@ function ProjectCard({ project }: { project: Project }) {
               px-4 py-2 rounded-lg text-[0.8rem]
               border transition-all duration-200
               whitespace-nowrap
+              break-keep
               ${
                 link.primary
                   ? "bg-red-950/30 border-red-500/30 text-red-300 hover:bg-red-500/25"

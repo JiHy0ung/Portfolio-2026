@@ -38,7 +38,7 @@ const Contact = () => {
           Open to opportunities
         </p>
 
-        <p className="mb-5 text-neutral-400 font-normal text-md leading-relaxed">
+        <p className="mb-5 text-neutral-400 font-normal text-sm md:text-md leading-relaxed">
           함께 <strong className="text-neutral-200">성장</strong>할 수 있는
           환경을 찾고 있습니다.
           <br />
@@ -50,12 +50,13 @@ const Contact = () => {
           <strong className="text-neutral-200">협업</strong> 관련 문의는
           언제든지 연락주세요.
         </p>
-        <div className="flex justify-center items-center gap-6">
+        <div className="flex justify-center items-center gap-3 md:gap-6 md:flex-row flex-col">
           <a
             onClick={handleCopyEmail}
             onMouseEnter={() => setEmailHover(true)}
             onMouseLeave={() => setEmailHover(false)}
             className="
+            w-full md:size-fit
             relative flex justify-center items-center gap-2
             pt-[0.4rem] pb-[0.45rem] px-[1rem]
             border-[0.5px] border-white/50 hover:border-white/70 rounded-sm
@@ -136,7 +137,9 @@ const Contact = () => {
             href="https://github.com/JiHy0ung"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex justify-center items-center
+            className="
+            w-full md:size-fit
+            flex justify-center items-center
             border-[0.5px] border-white/50 hover:border-white/70 rounded-sm
             pt-[0.7rem] pb-[0.75rem] px-[1rem]
             transition-colors duration-500
@@ -179,6 +182,7 @@ const Contact = () => {
             onMouseEnter={() => setResumeHover(true)}
             onMouseLeave={() => setResumeHover(false)}
             className="
+            w-full md:size-fit
             relative flex justify-center items-center gap-2
             border-[0.5px] border-white/50 hover:border-white/70 rounded-sm
             pt-[0.4rem] pb-[0.45rem] px-[1rem]
