@@ -3,11 +3,13 @@ const Skills = () => {
     <div
       className="w-full
      flex flex-col justify-center items-center
-     bg-red-900/50"
+     bg-red-900/10"
     >
       <div>
         <div className="flex items-center gap-3">
-          <p className="font-intel text-sm font-regular">TECH_STACK</p>
+          <p className="font-intel text-sm font-regular text-red-900">
+            TECH_STACK
+          </p>
           <div
             className="
             h-px w-[4rem]

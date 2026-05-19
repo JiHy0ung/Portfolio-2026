@@ -26,6 +26,7 @@ const Hero = () => {
   return (
     <div
       className="h-dvh
+      relative
       flex flex-col justify-center items-start"
     >
       <div
@@ -186,7 +187,7 @@ const Hero = () => {
       {/* 스크롤 가이드 */}
       <div
         className="
-        absolute bottom-20 left-1/2 -translate-x-1/2
+        absolute bottom-10 left-1/2 -translate-x-1/2
         flex flex-col items-center gap-2
         text-xs text-white/50 font-thin"
       >
