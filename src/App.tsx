@@ -1,4 +1,5 @@
 import Hero from "./components/sections/Hero";
+import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
 import CustomCursor from "./components/ui/CustomCursor";
 import Header from "./layout/Header";
@@ -35,6 +36,7 @@ function App() {
         <Header />
         <Hero />
         <Skills />
+        <Projects />
       </main>
     </>
   );
