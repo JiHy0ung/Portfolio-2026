@@ -84,9 +84,7 @@ const Hero = () => {
       </p>
       <div className="flex justify-center items-center gap-8">
         <a
-          href="https://github.com/JiHy0ung"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#projects"
           className="
           group
           flex

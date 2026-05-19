@@ -1,3 +1,4 @@
+import ScrollToTop from "./components/ScrollToTop";
 import Contact from "./components/sections/Contact";
 import Hero from "./components/sections/Hero";
 import Projects from "./components/sections/Projects";
@@ -41,6 +42,8 @@ function App() {
         <Projects />
 
         <Contact />
+
+        <ScrollToTop />
       </main>
     </>
   );
