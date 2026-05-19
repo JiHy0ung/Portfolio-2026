@@ -7,9 +7,8 @@ function App() {
     <>
       <CustomCursor />
 
-      {/* BACKGROUND */}
       <div className="fixed inset-0 -z-10">
-        {/* GRID */}
+        {/* 격자 */}
         <div
           className="absolute inset-0"
           style={{
@@ -21,7 +20,7 @@ function App() {
           }}
         />
 
-        {/* VIGNETTE */}
+        {/* 비네팅 효과 */}
         <div
           className="absolute inset-0"
           style={{
@@ -31,7 +30,6 @@ function App() {
         />
       </div>
 
-      {/* CONTENT */}
       <main className="relative min-h-screen w-full flex flex-col items-center">
         <Header />
         <Hero />
