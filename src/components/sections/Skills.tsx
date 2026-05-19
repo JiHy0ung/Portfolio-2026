@@ -56,7 +56,7 @@ const SKILL_GROUPS: SkillGroupType[] = [
     tags: ["Node.js", "Express"],
     levels: {
       상: [],
-      중: ["Node.js / Express"],
+      중: ["Node.js", "Express"],
       하: [],
     },
   },
@@ -81,7 +81,7 @@ const SKILL_GROUPS: SkillGroupType[] = [
     tags: ["MySQL", "Supabase", "PostgreSQL"],
     levels: {
       상: [],
-      중: ["MySQL", "Supabase / PostgreSQL"],
+      중: ["MySQL", "Supabase", "PostgreSQL"],
       하: [],
     },
   },
@@ -105,8 +105,8 @@ const SKILL_GROUPS: SkillGroupType[] = [
     title: "Tools",
     tags: ["Git", "GitHub", "Figma", "Notion", "Vercel", "VS Code", "Postman"],
     levels: {
-      상: ["Git / GitHub (브랜치 기반 협업, PR workflow)"],
-      중: ["Figma", "Notion ", "VS Code / Postman"],
+      상: ["Git", "GitHub"],
+      중: ["Figma", "Notion ", "VS Code", "Postman"],
       하: ["Vercel"],
     },
   },
