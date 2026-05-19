@@ -117,17 +117,24 @@ function SkillGroup({ icon, title, tags, levels }: SkillGroupType) {
     <div
       className="
         relative overflow-hidden rounded-2xl p-7
-
-        bg-white/5 backdrop-blur-xl
+        bg-white/1 backdrop-blur-[2px]
         border border-white/10
-
         transition-all duration-300
         hover:-translate-y-1
-        hover:border-[#ff3b5c]/40
-      "
+        hover:border-[#ff3b5c]/10
+        group 
+        "
     >
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#ff3b5c]/60 to-transparent" />
-
+      <div
+        className="
+        absolute top-0 left-0 right-0 h-[1px]
+        bg-gradient-to-r from-transparent via-[#ff3b5c]/60 to-transparent 
+        scale-x-0
+        origin-center
+        transition-transform duration-500 ease-out  
+        group-hover:scale-x-100
+        "
+      />
       <div className="font-syne font-semibold text-white/90 mb-5 flex items-center gap-2">
         {icon}
         <span>{title}</span>
@@ -180,7 +187,7 @@ function SkillGroup({ icon, title, tags, levels }: SkillGroupType) {
 
 const Skills = () => {
   return (
-    <section className="w-full py-28 bg-[#100b0b]">
+    <section className="w-full py-28 bg-[#100b0b]/70">
       <div className="max-w-[50.55rem] mx-auto px-8">
         <div className="flex items-center gap-3 mb-3 text-[0.75rem] text-red-500 tracking-[.2em]">
           TECH_STACK
