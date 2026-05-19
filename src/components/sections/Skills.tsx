@@ -187,7 +187,7 @@ function SkillGroup({ icon, title, tags, levels }: SkillGroupType) {
 
 const Skills = () => {
   return (
-    <section className="w-full py-28 bg-[#100b0b]/70">
+    <section className="w-full py-28 bg-[#100b0b]/75">
       <div className="max-w-[50.55rem] mx-auto px-8">
         <div className="flex items-center gap-3 mb-3 text-[0.75rem] text-red-500 tracking-[.2em]">
           TECH_STACK
