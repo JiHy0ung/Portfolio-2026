@@ -37,7 +37,7 @@ const PROJECTS: Project[] = [
       },
       {
         label: "GitHub",
-        href: "https://github.com/SoYoungLEE-me/bangbang-trip",
+        href: "https://github.com/JiHy0ung/bangbang-trip",
       },
     ],
   },
@@ -71,21 +71,35 @@ const PROJECTS: Project[] = [
   },
   {
     type: "개인 프로젝트",
-    year: "2024",
+    year: "2025",
     title: "나이키 클론 코딩",
     desc: "Nike 공식 사이트 UI 클론",
     bullets: ["컴포넌트 단위 구조 설계", "React Router 기반 SPA 라우팅"],
     tech: ["React", "JavaScript", "CSS"],
-    links: [{ label: "GitHub", href: "https://github.com/JiHy0ung" }],
+    links: [
+      {
+        label: "라이브 데모",
+        href: "https://nodejs-nike-clone.netlify.app/",
+        primary: true,
+      },
+      { label: "GitHub", href: "https://github.com/JiHy0ung/shopping-mall" },
+    ],
   },
   {
     type: "개인 프로젝트",
-    year: "2024",
+    year: "2025",
     title: "스포티파이 클론 코딩",
     desc: "Spotify 웹 플레이어 UI 클론",
     bullets: ["CSS Grid/Flex 레이아웃 구현", "오디오 플레이어 UI 인터랙션"],
     tech: ["React", "JavaScript", "CSS"],
-    links: [{ label: "GitHub", href: "https://github.com/JiHy0ung" }],
+    links: [
+      {
+        label: "라이브 데모",
+        href: "https://spotify-tsc.vercel.app/",
+        primary: true,
+      },
+      { label: "GitHub", href: "https://github.com/JiHy0ung/spotify-tsc" },
+    ],
   },
 ];
 
