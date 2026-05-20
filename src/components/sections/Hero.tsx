@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const text = "Frontend Developer, Code meets taste.";
+  const text = "Frontend Developer, Thinking beyond the screen.";
 
   const [displayText, setDisplayText] = useState("");
 
@@ -20,8 +20,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const intro =
-    "사용자 중심의 인터랙티브한 웹 경험을 만드는 프론트엔드 개발자.";
+  const intro = "화면, 그 너머의 사람을 생각합니다";
 
   return (
     <div
