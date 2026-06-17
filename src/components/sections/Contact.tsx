@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-28">
+    <section className="pt-28 pb-60">
       <div className="max-w-[1100px] mx-auto px-8">
         <div className="flex items-center gap-3 mb-3 text-[0.75rem] text-red-500 tracking-[.2em]">
           CONTACT
