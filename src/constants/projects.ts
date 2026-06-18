@@ -42,6 +42,36 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
+    type: "공모전 · 진행 중",
+    year: "2026",
+    title: "속솜",
+    desc: "제주도 오버투어리즘 해소를 위한 혼잡 회피형 스마트 관광 루트 추천 서비스",
+    bullets: [
+      "Kakao Maps SDK 연동 및 커스텀 SVG 마커·동적 색상 인코딩 구현",
+      "Zustand 기반 전역 상태 관리 (관심 스팟, 경유지, UI 상태)",
+      "TanStack Query + useMutation으로 API 호출 및 서버 상태 관리",
+      "Kakao Mobility API 다중 경유지 길찾기 및 도로 오류 fallback 훅 구현",
+      "폴리라인 기반 지도 경로 시각화 구현",
+      "react-dnd 드래그앤드롭 경유지 순서 변경 기능 개발",
+    ],
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Zustand",
+      "TanStack Query",
+      "Axios",
+      "Kakao Maps SDK",
+      "Tailwind CSS",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/colaage23/soksom",
+      },
+    ],
+  },
+  {
     type: "팀 프로젝트",
     year: "2026",
     title: "방방곡곡",
