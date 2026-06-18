@@ -132,8 +132,6 @@ const Contact = () => {
           </a>
           <a
             onClick={handleCopyEmail}
-            onMouseEnter={() => setResumeHover(true)}
-            onMouseLeave={() => setResumeHover(false)}
             href="https://github.com/JiHy0ung"
             target="_blank"
             rel="noopener noreferrer"
