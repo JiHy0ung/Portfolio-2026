@@ -81,7 +81,27 @@ function ProjectCard({ project }: { project: Project }) {
         w-full md:w-auto
         "
       >
-        {" "}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/projects/${project.id}`);
+          }}
+          className="
+            flex items-center justify-center gap-1.5
+            px-4 py-2 rounded-lg text-[0.8rem]
+            border transition-all duration-200
+            whitespace-nowrap
+            bg-red-800/80 border-red-500/30 text-white
+            hover:bg-red-700
+            group/btn
+          "
+        >
+          자세히 보기
+          <span className="group-hover/btn:translate-x-1 transition-transform duration-200">
+            →
+          </span>
+        </button>
+
         {project.links.map((link) => (
           <a
             key={link.label}
