@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { PROJECTS, type Project } from "../../constants/projects";
 
 function ProjectCard({ project }: { project: Project }) {
+  const navigate = useNavigate();
   return (
     <div
+      onClick={() => navigate(`/projects/${project.id}`)}
       className="
       relative overflow-hidden
       bg-[#2a0f0f]/70 border border-[#3b1e1e] rounded-2xl
@@ -30,7 +33,7 @@ function ProjectCard({ project }: { project: Project }) {
           <span className="bg-red-950/30 border border-red-500/20 px-2 py-0.5 rounded-[4px]">
             {project.type}
           </span>
-          <span className="text-[#966d6d]">· {project.year}</span>
+          <span className="text-[#966d6d]">· {project.period}</span>
         </div>
 
         <h3 className="font-syne font-bold text-[1.4rem] text-[#F1F5F9] mb-3">

@@ -3,6 +3,7 @@ import { SKILL_GROUPS, type SkillGroupType } from "../../constants/skills";
 function SkillGroup({ icon, title, tags }: SkillGroupType) {
   return (
     <div
+      id="skills"
       className="
         relative overflow-hidden rounded-2xl p-7
         bg-white/1 backdrop-blur-[2px]
