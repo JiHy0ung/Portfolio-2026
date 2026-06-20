@@ -15,7 +15,7 @@ const ProjectDetail = () => {
       top: 0,
       behavior: "smooth",
     });
-  }, []);
+  }, [id]);
 
   const goToProjects = () => {
     navigate("/");
