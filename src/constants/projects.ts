@@ -41,93 +41,6 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    slug: "trace",
-    type: "개인 프로젝트 · 진행 중",
-    year: "2026",
-    title: "Trace Blog",
-    desc: "학습 기록의 지속성과 접근성을 높이기 위해 직접 설계·구축한 TIL 블로그 플랫폼",
-    bullets: [
-      "Next.js App Router 서버 컴포넌트를 활용해 클라이언트 번들 최소화 및 초기 로딩 성능 개선",
-      "RLS(Row Level Security) 정책 설계로 인증 없이 DB에 직접 접근하는 보안 취약점 차단",
-      "GitHub Actions 기반 CI 파이프라인 구축으로 타입 에러·린트 오류가 배포되는 것을 사전 차단",
-      "Hydration Mismatch 문제를 useSyncExternalStore로 해결해 다크 모드 깜빡임 현상 제거",
-      "Supabase Auth GitHub OAuth로 관리자 권한을 환경변수 기반으로 분리해 보안 구조 설계",
-    ],
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Supabase",
-      "PostgreSQL",
-      "Vercel",
-      "GitHub Actions",
-    ],
-    links: [
-      {
-        label: "라이브 데모",
-        href: "https://trace-yjh.vercel.app",
-        primary: true,
-      },
-      { label: "GitHub", href: "https://github.com/JiHy0ung/trace" },
-    ],
-
-    overview:
-      "단순히 블로그를 운영하는 것이 아니라, 실제 서비스를 혼자 설계·구현·배포하는 경험을 목표로 만든 TIL 플랫폼. 기능 구현보다 '왜 이 구조를 선택했는가'를 고민하며 Next.js App Router의 렌더링 전략, Supabase의 보안 정책, CI/CD 파이프라인까지 직접 결정하고 적용했습니다.",
-    background:
-      "기존 블로그 플랫폼은 학습 기록을 체계적으로 관리하기 어렵고, 직접 만들어보지 않으면 알 수 없는 영역이 있다고 판단했습니다. 프론트엔드 개발자로서 단순 UI 구현을 넘어 인증, DB 설계, 보안, 배포 자동화까지 전체 흐름을 이해하는 것을 목표로 시작했습니다.",
-    period: "2026.05 — 진행 중",
-    team: [{ role: "개인 개발", count: 1 }],
-    myRole: [
-      "서비스 전체 기획 및 기술 스택 선정",
-      "Next.js App Router 기반 렌더링 전략 설계 및 구현",
-      "Supabase PostgreSQL DB 스키마 설계 및 RLS 보안 정책 구성",
-      "GitHub OAuth 기반 관리자 인증 및 권한 분리 구현",
-      "Markdown 에디터 기반 게시글 CRUD 구현",
-      "useSyncExternalStore 활용 다크 모드 Hydration 문제 해결",
-      "GitHub Actions CI + Vercel CD 파이프라인 구성",
-    ],
-    techDetail: [
-      { category: "Framework", items: ["Next.js (App Router)", "TypeScript"] },
-      { category: "Style", items: ["Tailwind CSS"] },
-      { category: "Backend / DB", items: ["Supabase", "PostgreSQL"] },
-      { category: "Auth", items: ["GitHub OAuth (Supabase Auth)"] },
-      { category: "Infra", items: ["Vercel", "GitHub Actions"] },
-    ],
-    challenges: [
-      {
-        problem:
-          "next-themes 적용 시 서버·클라이언트 간 theme 값 불일치로 Hydration Mismatch 발생. 초기 렌더링 시 다크 모드 UI가 깜빡이는 현상이 나타남.",
-        solution:
-          "mounted 상태로 클라이언트 마운트 이후에만 theme UI를 렌더링하도록 수정. 이후 별도 useState 없이 useSyncExternalStore로 마운트 여부를 판별하도록 리팩토링해 불필요한 상태 관리를 제거하고 ESLint 경고도 해결함.",
-      },
-      {
-        problem:
-          "GitHub Actions CI 환경에서 .next/ 폴더가 없어 tsc --noEmit 실행 시 PNG 모듈 타입 선언을 찾지 못해 타입 에러 발생. 로컬에서는 정상 동작하던 코드가 CI에서만 실패하는 환경 차이 문제.",
-        solution:
-          "CI 환경과 로컬 환경의 차이를 분석해 next-env.d.ts 의존 대신 images.d.ts에 PNG 모듈 타입을 전역 선언함으로써 환경에 관계없이 일관된 타입 체크가 가능하도록 해결함.",
-      },
-    ],
-    images: [
-      {
-        src: "/images/trace-1.png",
-        alt: "메인 화면(다크)",
-        caption: "Trace 블로그 메인",
-      },
-      {
-        src: "/images/trace-2.png",
-        alt: "메인 화면(라이트)",
-        caption: "Trace 블로그 메인",
-      },
-      {
-        src: "/images/trace-3.png",
-        alt: "글 작성(라이트)",
-        caption: "Markdown 에디터",
-      },
-    ],
-  },
-
-  {
-    id: 2,
     slug: "soksom",
     type: "공모전 · 진행 중",
     year: "2026",
@@ -210,6 +123,92 @@ export const PROJECTS: Project[] = [
         src: "/images/soksom-2.png",
         alt: "탐색 페이지",
         caption: "관광지 목록(검색, 카테고리) & 카카오 지도",
+      },
+    ],
+  },
+  {
+    id: 2,
+    slug: "trace",
+    type: "개인 프로젝트 · 진행 중",
+    year: "2026",
+    title: "Trace Blog",
+    desc: "학습 기록의 지속성과 접근성을 높이기 위해 직접 설계·구축한 TIL 블로그 플랫폼",
+    bullets: [
+      "Next.js App Router 서버 컴포넌트를 활용해 클라이언트 번들 최소화 및 초기 로딩 성능 개선",
+      "RLS(Row Level Security) 정책 설계로 인증 없이 DB에 직접 접근하는 보안 취약점 차단",
+      "GitHub Actions 기반 CI 파이프라인 구축으로 타입 에러·린트 오류가 배포되는 것을 사전 차단",
+      "Hydration Mismatch 문제를 useSyncExternalStore로 해결해 다크 모드 깜빡임 현상 제거",
+      "Supabase Auth GitHub OAuth로 관리자 권한을 환경변수 기반으로 분리해 보안 구조 설계",
+    ],
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "Vercel",
+      "GitHub Actions",
+    ],
+    links: [
+      {
+        label: "라이브 데모",
+        href: "https://trace-yjh.vercel.app",
+        primary: true,
+      },
+      { label: "GitHub", href: "https://github.com/JiHy0ung/trace" },
+    ],
+
+    overview:
+      "단순히 블로그를 운영하는 것이 아니라, 실제 서비스를 혼자 설계·구현·배포하는 경험을 목표로 만든 TIL 플랫폼. 기능 구현보다 '왜 이 구조를 선택했는가'를 고민하며 Next.js App Router의 렌더링 전략, Supabase의 보안 정책, CI/CD 파이프라인까지 직접 결정하고 적용했습니다.",
+    background:
+      "기존 블로그 플랫폼은 학습 기록을 체계적으로 관리하기 어렵고, 직접 만들어보지 않으면 알 수 없는 영역이 있다고 판단했습니다. 프론트엔드 개발자로서 단순 UI 구현을 넘어 인증, DB 설계, 보안, 배포 자동화까지 전체 흐름을 이해하는 것을 목표로 시작했습니다.",
+    period: "2026.05 — 진행 중",
+    team: [{ role: "개인 개발", count: 1 }],
+    myRole: [
+      "서비스 전체 기획 및 기술 스택 선정",
+      "Next.js App Router 기반 렌더링 전략 설계 및 구현",
+      "Supabase PostgreSQL DB 스키마 설계 및 RLS 보안 정책 구성",
+      "GitHub OAuth 기반 관리자 인증 및 권한 분리 구현",
+      "Markdown 에디터 기반 게시글 CRUD 구현",
+      "useSyncExternalStore 활용 다크 모드 Hydration 문제 해결",
+      "GitHub Actions CI + Vercel CD 파이프라인 구성",
+    ],
+    techDetail: [
+      { category: "Framework", items: ["Next.js (App Router)", "TypeScript"] },
+      { category: "Style", items: ["Tailwind CSS"] },
+      { category: "Backend / DB", items: ["Supabase", "PostgreSQL"] },
+      { category: "Auth", items: ["GitHub OAuth (Supabase Auth)"] },
+      { category: "Infra", items: ["Vercel", "GitHub Actions"] },
+    ],
+    challenges: [
+      {
+        problem:
+          "next-themes 적용 시 서버·클라이언트 간 theme 값 불일치로 Hydration Mismatch 발생. 초기 렌더링 시 다크 모드 UI가 깜빡이는 현상이 나타남.",
+        solution:
+          "mounted 상태로 클라이언트 마운트 이후에만 theme UI를 렌더링하도록 수정. 이후 별도 useState 없이 useSyncExternalStore로 마운트 여부를 판별하도록 리팩토링해 불필요한 상태 관리를 제거하고 ESLint 경고도 해결함.",
+      },
+      {
+        problem:
+          "GitHub Actions CI 환경에서 .next/ 폴더가 없어 tsc --noEmit 실행 시 PNG 모듈 타입 선언을 찾지 못해 타입 에러 발생. 로컬에서는 정상 동작하던 코드가 CI에서만 실패하는 환경 차이 문제.",
+        solution:
+          "CI 환경과 로컬 환경의 차이를 분석해 next-env.d.ts 의존 대신 images.d.ts에 PNG 모듈 타입을 전역 선언함으로써 환경에 관계없이 일관된 타입 체크가 가능하도록 해결함.",
+      },
+    ],
+    images: [
+      {
+        src: "/images/trace-1.png",
+        alt: "메인 화면(다크)",
+        caption: "Trace 블로그 메인",
+      },
+      {
+        src: "/images/trace-2.png",
+        alt: "메인 화면(라이트)",
+        caption: "Trace 블로그 메인",
+      },
+      {
+        src: "/images/trace-3.png",
+        alt: "글 작성(라이트)",
+        caption: "Markdown 에디터",
       },
     ],
   },
